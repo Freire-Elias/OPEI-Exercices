@@ -1,0 +1,6 @@
+map(int, input().split())  # lê vários valores na mesma linha
+max(lista, key=...)        # máximo com critério
+sorted(palavra)            # comparar anagramas
+Counter(palavra)           # contar letras rapidamente
+collections.defaultdict    # dicionário sem KeyError
+dit.get                    # Retorna valor da chave

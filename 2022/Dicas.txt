@@ -1,0 +1,53 @@
+# Lista com valor padrão
+[0] * 10          # → [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+# Lista com range
+list(range(5))    # → [0, 1, 2, 3, 4]
+
+lista = [3, 1, 4, 1, 5, 9, 2]
+
+5 in lista           # → True  (existe?)
+lista.index(4)       # → 2     (posição do elemento)
+lista.count(1)       # → 2     (quantas vezes aparece)
+
+lista = [3, 1, 4, 1, 5]
+
+sorted(lista)              # → [1, 1, 3, 4, 5]  (não modifica original)
+lista.sort()               # modifica a própria lista
+lista.sort(reverse=True)   # → [5, 4, 3, 1, 1]
+
+# Ordenar por critério
+palavras = ["banana", "uva", "abacaxi"]
+sorted(palavras, key=len)  # → ["uva", "banana", "abacaxi"]
+
+lista = [0, 1, 2, 3, 4, 5]
+
+lista[2:5]    # → [2, 3, 4]      (do índice 2 até 4)
+lista[:3]     # → [0, 1, 2]      (do início até 2)
+lista[3:]     # → [3, 4, 5]      (do índice 3 até o fim)
+lista[-1]     # → 5              (último elemento)
+lista[-3:]    # → [3, 4, 5]      (últimos 3)
+lista[::-1]   # → [5, 4, 3, 2, 1, 0]  (invertida)
+
+nomes  = ["Ana", "Bob", "Carol"]
+pontos = [10, 20, 30]
+
+for nome, ponto in zip(nomes, pontos):
+    print(nome, ponto)
+# Ana 10
+# Bob 20
+# Carol 30
+
+Todos satisfazem condição all(x > 0 for x in lista)
+Algum satisfaz condição any(x > 0 for x in lista)
+
+set([1, 2, 2, 3, 3, 3])   # → {1, 2, 3}
+set("ABAGUAB")             # → {'A', 'B', 'G', 'U'}
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+a | b   # união         → {1, 2, 3, 4, 5, 6}
+a & b   # interseção    → {3, 4}
+a - b   # diferença     → {1, 2}  (está em a mas não em b)
+a ^ b   # diferença simétrica → {1, 2, 5, 6} (está em um mas não nos dois)
